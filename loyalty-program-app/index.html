@@ -28,7 +28,16 @@
 
   <section id="redeem">
     <h2>Redeem Your Points</h2>
-    <p>Choose from our rewards catalog.</p>
+    <form id="redeem-form">
+      <label for="reward">Select a reward:</label>
+      <select id="reward" name="reward">
+        <option value="coffee-mug">Coffee Mug - 200 Points</option>
+        <option value="t-shirt">T-Shirt - 500 Points</option>
+        <option value="voucher">Gift Voucher - 1000 Points</option>
+      </select>
+      <button type="submit">Redeem</button>
+    </form>
+    <p id="redeem-result"></p>
   </section>
 
   <script src="script.js"></script>
