@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
+  transition: background-color 0.5s ease;
 }
 
 nav {
@@ -33,10 +34,14 @@ section {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-section h2 {
-  color: #333;
+section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 form {
@@ -74,7 +79,14 @@ form button:hover {
   font-weight: bold;
 }
 
-/* Hide all sections by default */
-section {
-  display: none;
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form select {
+    width: 100%;
+  }
 }
