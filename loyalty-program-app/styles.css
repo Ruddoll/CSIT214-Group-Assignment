@@ -1,41 +1,230 @@
+/* Base Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+  background-color: #007bff;
+  color: white;
+}
+
+section {
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 600px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+section.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+form {
+  margin-top: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form select, input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+#redeem-result {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#undo {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#undo:hover {
+  background-color: #0056b3;
+}
+
+/* Loading Spinner */
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #333;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Points History Log Styles within Profile */
+#points-history-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#points-history-list li {
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1c1c1c;
+    color: #e0e0e0;
   }
-  
+
   nav {
-    background-color: #333;
-    padding: 10px;
+    background-color: #444;
   }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  nav ul li {
-    display: inline;
-  }
-  
+
   nav ul li a {
+    color: #e0e0e0;
+  }
+
+  nav ul li a.active {
+    background-color: #007bff;
     color: white;
-    text-decoration: none;
   }
-  
+
   section {
-    padding: 20px;
-    margin: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
   }
-  
-  section h2 {
-    color: #333;
+
+  form select, input[type="text"] {
+    background-color: #555;
+    color: #e0e0e0;
+    border: 1px solid #777;
   }
-  
+
+  form button {
+    background-color: #555;
+  }
+
+  form button:hover {
+    background-color: #777;
+  }
+
+  #undo {
+    background-color: #28a745;
+  }
+
+  #undo:hover {
+    background-color: #218838;
+  }
+
+  .spinner {
+    border-left-color: #e0e0e0;
+  }
+
+  #points-history-list li {
+    background-color: #444;
+    color: #e0e0e0;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form select, input[type="text"] {
+    width: 100%;
+  }
+}
+
+#logout {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
