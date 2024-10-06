@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlyDreamAir</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" /> 
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+          <a href="./index.html"><img src="./assets/logo.png" alt="logo"></a>
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation">
+          <span class="hamburger"></span>
+          <nav class="nav">
+              <ul class="nav__list">
+                  <li class="nav__item"><a href="./index.html" class="nav__link">Home</a></li>
+                  <li class="nav__item"><a href="./earn.html" class="nav__link">Earn Points</a></li>
+                  <li class="nav__item"><a href="./redeem.html" class="nav__link">Redeem Points</a></li>
+                  <li class="nav__item"><a href="./account.html" class="nav__link">My Account</a></li>
+              </ul>
+          </nav>
+    </header>
+
+
+    <!-- Redeem Points -->
+    <section class="redeem-points" id="redeem">
+      <h1 class="section__title section__title--redeem">
+          <strong>Redeem Points</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle--redeem">
+        Explore FDA Rewards and use your FDA Points
+      </p>
+  </section>
+
+  <section class="history-tracking"><h4 id="user-balance"><span id="user-points"></span> pts</h4>
+    <ul id="points-history-list"></ul></section>
+
+  <!-- Loyalty Tiers Section -->
+  <section class="blog blog-redeem" id="blog-loyalty_tiers">
+
+    <!-- heading -->
+    <div class="blog-heading blog-heading--redeem">
+      <h3>Loyalty Tiers</h3>
+      <p>Upgrade your tier and enjoy all the perks.</p> 
+    </div>
+
+    <!-- blog container -->
+    <div class="blog-container">
+
+      <!-- box 1 -->
+      <div class="blog-box blog-box--redeem">
+        <div class="blog-img blog-img--redeem">
+          <img src="./assets/find-the-perfect-new-employee-welcome-to-the-team-images-1.png" alt="Blog image">
+        </div>
+
+        <!-- text -->
+        <div class="blog-text blog-text--redeem">
+          <a href="" class="blog-title blog-title--redeem">Bronze Tier</a>
+          <ul>
+          <li>Free Checked Bag</li>                    
+          <li>Priority Boarding</li>
+          <li>Bonus FDA Reward Points</li>
+          </ul>
+          <a href="" class="btn btn-redeem">More</a>
+          <span>2500 PTS</span>
+
+        </div>
+
+      </div>
+
+      <!-- box 2 -->
+      <div class="blog-box blog-box--redeem">
+        <div class="blog-img blog-img--redeem">
+          <img src="./assets/find-the-perfect-new-employee-welcome-to-the-team-images-1.png" alt="Blog image">
+        </div>
+
+        <!-- text -->
+        <div class="blog-text blog-text--redeem">
+          <a href="" class="blog-title blog-title--redeem">Silver Tier</a>
+          <ul>
+          <li>All Bronze Benefits</li>                    
+          <li>Flight Upgrade</li>
+          <li>Lounge Access (One-time)</li>
+          </ul>
+          <a href="" class="btn btn-redeem">More</a>
+          <span>5000 PTS</span>
+
+        </div>
+
+      </div>
+
+      <!-- box 3 -->
+      <div class="blog-box blog-box--redeem">
+        <div class="blog-img blog-img--redeem">
+          <img src="./assets/find-the-perfect-new-employee-welcome-to-the-team-images-1.png" alt="Blog image">
+        </div>
+
+        <!-- text -->
+        <div class="blog-text blog-text--redeem">
+          <a href="" class="blog-title blog-title--redeem">Gold Tier</a>
+          <ul>
+          <li>All Silver Benefits</li>                    
+          <li>Free Flight Ticket</li>
+          <li>Bonus FDA Reward Points</li>
+          </ul>
+          <a href="" class="btn btn-redeem">More</a>
+          <span>10000 PTS</span>
+
+        </div>
+
+      </div>
+
+      <!-- box 4 -->
+      <div class="blog-box blog-box--redeem">
+        <div class="blog-img blog-img--redeem">
+          <img src="./assets/find-the-perfect-new-employee-welcome-to-the-team-images-1.png" alt="Blog image">
+        </div>
+
+        <!-- text -->
+        <div class="blog-text blog-text--redeem">
+          <a href="" class="blog-title blog-title--redeem">Platinum Tier</a>
+          <ul>
+          <li>All Gold Benefits</li>                    
+          <li>Companion Ticket</li>
+          <li>Unlimited Lounge Access</li>
+          </ul>
+          <a href="" class="btn btn-redeem">More</a>
+          <span>10000 PTS</span>
+
+        </div>
+
+      </div>
+        
+      <a href="./earn.html" class="btn" id="upgrade-tier-btn">Upgrade Your Tier</a>  
+
+    </div>
+
+</section>
+
+  <!-- Redeem Flights Section -->
+<section class="blog blog-redeem" id="blog-redeem-flights">
+  <div class="blog-heading blog-heading--redeem">
+      <h3>Flights</h3>
+      <p>Redeem points to book a seat for your next trip.</p> 
+  </div>
+
+  <div class="blog-container">
+      <!-- Sydney to Hanoi Flight -->
+      <div class="blog-box blog-box--redeem">
+          <div class="blog-img blog-img--redeem">
+              <img src="./assets/find-the-perfect-new-employee-welcome-to-the-team-images-1.png" alt="Sydney to Hanoi">
+          </div>
+          <div class="blog-text blog-text--redeem">
+              <a href="#" class="blog-title blog-title--redeem">Sydney to Hanoi</a>
+              <p>Economy one-way</p>
+              <span>15,000 PTS</span>
+              <a href="#" id="redeem-sydney-hanoi" class="btn btn-redeem">Redeem Points</a>
+          </div>
+      </div>
+
+      <!-- Paris to Rome Flight -->
+      <div class="blog-box blog-box--redeem">
+          <div class="blog-img blog-img--redeem">
+              <img src="./assets/find-the-perfect-new-employee-welcome-to-the-team-images-1.png" alt="Paris to Rome">
+          </div>
+          <div class="blog-text blog-text--redeem">
+              <a href="#" class="blog-title blog-title--redeem">Paris to Rome</a>
+              <p>Economy one-way</p>
+              <span>20,000 PTS</span>
+              <a href="#" id="redeem-paris-rome" class="btn btn-redeem">Redeem Points</a>
+          </div>
+      </div>
+
+      <!-- Beijing to Tokyo Flight -->
+      <div class="blog-box blog-box--redeem">
+        <div class="blog-img blog-img--redeem">
+            <img src="./assets/find-the-perfect-new-employee-welcome-to-the-team-images-1.png" alt="Sydney to Hanoi">
+        </div>
+        <div class="blog-text blog-text--redeem">
+            <a href="#" class="blog-title blog-title--redeem">Beijing to Tokyo</a>
+            <p>Economy one-way</p>
+            <span>12,000 PTS</span>
+            <a href="#" id="redeem-beijing-tokyo" class="btn btn-redeem">Redeem Points</a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Hotel & Travel Section -->
+  <section class="blog blog-redeem" id="blog-loyalty_tiers">
+
+    <!-- heading -->
+    <div class="blog-heading blog-heading--redeem">
+      <h3>Hotel & Travel</h3>
+      <p>Save some money and spend your points on hotel and transport.</p> 
+    </div>
+
+    <!-- blog container -->
+    <div class="blog-container">
+
+      <!-- box 1 -->
+      <div class="blog-box blog-box--redeem">
+        <div class="blog-img blog-img--redeem">
+          <img src="./assets/find-the-perfect-new-employee-welcome-to-the-team-images-1.png" alt="Blog image">
+        </div>
+
+        <!-- text -->
+        <div class="blog-text blog-text--redeem">
+          <a href="" class="blog-title blog-title--redeem">Sydney Backpacker</a>
+          <p>One night stay</p>
+          <span>7500 PTS</span>
+
+        </div>
+
+      </div>
+
+      <!-- box 2 -->
+      <div class="blog-box blog-box--redeem">
+        <div class="blog-img blog-img--redeem">
+          <img src="./assets/find-the-perfect-new-employee-welcome-to-the-team-images-1.png" alt="Blog image">
+        </div>
+
+        <!-- text -->
+        <div class="blog-text blog-text--redeem">
+          <a href="" class="blog-title blog-title--redeem">DeLux Hotel</a>
+          <p>One night stay</p>
+          <span>25000 PTS</span>
+
+        </div>
+
+      </div>
+
+      <!-- box 3 -->
+      <div class="blog-box blog-box--redeem">
+        <div class="blog-img blog-img--redeem">
+          <img src="./assets/find-the-perfect-new-employee-welcome-to-the-team-images-1.png" alt="Blog image">
+        </div>
+
+        <!-- text -->
+        <div class="blog-text blog-text--redeem">
+          <a href="" class="blog-title blog-title--redeem">Jasper Stay</a>
+          <p>One night stay</p>
+          <span>10000 PTS</span>
+
+        </div>
+
+      </div>
+        
+      <a href="./earn.html" class="btn btn-redeem" id="upgrade-tier-btn">Accessibility</a>  
+      <a href="./earn.html" class="btn btn-redeem" id="upgrade-tier-btn">Airport Pickup</a>  
+      <a href="./earn.html" class="btn btn-redeem" id="upgrade-tier-btn">Brunch Buffet</a>  
+      <a href="./earn.html" class="btn btn-redeem" id="upgrade-tier-btn">Car Rentals</a>  
+
+    </div>
+
+</section>
+
+    <!-- <section id="redeem">
+      <h2>Redeem Your Points</h2>
+
+      <form id="redeem-form">
+        <label for="reward">Select a reward:</label>
+        <select id="reward" name="reward">
+          <option value="coffee-mug">Coffee Mug - 200 Points</option>
+          <option value="t-shirt">T-Shirt - 500 Points</option>
+          <option value="voucher">Gift Voucher - 1000 Points</option>
+        </select>
+        <button type="submit">Redeem</button>
+      </form>
+
+      <p id="redeem-result"></p>
+
+      <button id="undo" style="display: none;">Undo Last Redemption</button>
+    </section> -->
+        
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <a href="" class="footer__link">Privacy policy |</a>
+      <a href="" class="footer__link">Cookie policy |</a>
+      <a href="" class="footer__link">Terms & conditions |</a>
+      <a href="" class="footer__link">Keeping your data safe |</a>
+      <a href="" class="footer__link">Feedback</a>
+      <ul class="social-list">
+          <li class="social-list__item"><a class="social-list__link" href="https://twitter.com"><img src="./assets/iconmonstr-twitter-1-240.png"></a></li>
+          <li class="social-list__item"><a class="social-list__link" href="https://github.com"><img src="./assets/iconmonstr-github-1-240.png"></a></li>
+          <li class="social-list__item"><a class="social-list__link" href="https://www.linkedin.com"><img src="./assets/iconmonstr-linkedin-1-240.png"></a></li>
+      </ul>
+    </footer>
+
+    <!-- <script type="module" src="navigation.js"></script> -->
+    <script type="module" src="./js/redeem.js"></script>
+    <!-- <script type="module" src="login.js"></script> -->
+    <!-- <script type="module" src="earn-points.js"></script> -->
+    <script src="./js/index.js"></script>
+    
+  </body>
+</html>
