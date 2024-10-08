@@ -57,3 +57,57 @@ document.addEventListener('DOMContentLoaded', () => {
     // Display the current points balance on page load
     pointsElement.textContent = `Loyalty Points: ${points}`;
 });
+
+// Flight & Seat Selection 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const seatSelectionButton = document.getElementById('seat-selection-btn');
+    const seatSelectionSection = document.getElementById('flight-selection-section');
+
+    seatSelectionButton.addEventListener('click', () => {
+        // Display the seat selection section
+        seatSelectionSection.style.display = 'block';
+        seatSelectionSection.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const selectFlightButtons = document.querySelectorAll('.select-flight-btn');
+    const seatSelectionPage = document.getElementById('seat-selection-page');
+    const flightSelectionSection = document.getElementById('flight-selection-section');
+
+    selectFlightButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Hide the flight selection section
+            flightSelectionSection.style.display = 'none';
+
+            // Show the seat selection section
+            seatSelectionPage.style.display = 'block';
+            seatSelectionPage.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const confirmSeatBtn = document.querySelector('.confirm-seat-btn'); // The button in seat selection
+    const confirmationModal = document.getElementById('confirmation-modal');
+    const cancelBtn = document.getElementById('cancel-btn');
+    const proceedBtn = document.getElementById('proceed-btn');
+
+    // When the Confirm button is clicked, show the confirmation modal
+    confirmSeatBtn.addEventListener('click', () => {
+        confirmationModal.style.display = 'block';
+    });
+
+    // If the Cancel button is clicked, hide the modal
+    cancelBtn.addEventListener('click', () => {
+        confirmationModal.style.display = 'none';
+    });
+
+    // If the Proceed button is clicked, proceed with the transaction
+    proceedBtn.addEventListener('click', () => {
+        confirmationModal.style.display = 'none';
+        // You can add logic here to handle point deduction or form submission
+        alert('Points have been used!');
+    });
+});
