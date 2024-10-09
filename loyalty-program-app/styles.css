@@ -19,6 +19,7 @@
     --clr-secondary: #303030;
     --clr-accent: #000040;
     --clr-accent2: #e01639;
+    --clr-accent3: #007bff;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -33,7 +34,8 @@
     --clr-primary: #303030;
     --clr-secondary: #fff;
     --clr-accent: #e01639;
-    --clr-accent2: #16e0bd;
+    --clr-accent2: #007bff;
+    --clr-accent3: #000040;
   }
 
 @media (min-width: 800px) {
@@ -101,16 +103,15 @@ img {
     background-color: var(--clr-accent2);
 }
 
+.btn-redeem, .btn-earn {
+  margin: 20px;
+}
+
 #delete-account {
   background-color: var(--clr-accent2);
 }
 
-/* #upgrade-tier-btn {
-  display: block;
-} */
 
-
-/* Typography */
 
 h1,
 h2,
@@ -160,7 +161,7 @@ header {
 }
 
 .logo img {
-  max-width: 100px;
+  max-width: 125px;
 }
 
 .current-page {
@@ -169,7 +170,7 @@ header {
 
 .nav__list {
   list-style: none;
-  margin: 0;
+  margin: 1.25rem;
 }
 
 .nav__link {
@@ -291,30 +292,6 @@ header {
 .hamburger::after { bottom: 6px; }
 
 
-/* Sections */
-
-/* section {
-  padding: 20px;
-  margin: 20px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  position: absolute;
-  top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 600px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-} */
-
-/* section.show {
-  opacity: 1;
-  pointer-events: all;
-} */
-
 
 
 /* Intro section */
@@ -365,7 +342,7 @@ header {
 .blog-box {
   width: 350px;
   background-color: var(--clr-primary);
-  border: 1px solid #ececec;
+  border: 1px solid var(--clr-primary);
   margin: 20px;
   box-shadow: var(--bs);
   border-radius: 30px;
@@ -374,6 +351,10 @@ header {
 .blog-img {
   width: 100%;
   height: auto;
+}
+
+.blog-img-index {
+  height: 200px;
 }
 
 .blog-img img {
@@ -419,7 +400,7 @@ header {
 
 .blog-text a {
   text-decoration: none;
-  color: var(--clr-secondary);
+  color: var(--clr-primary);
 }
 
 .blog-text a:hover {
@@ -438,22 +419,6 @@ header {
   margin-left: auto;
   margin-right: auto;
 }
-
-/* .blog-tier img {
-  color: #000;
-} */
-
-/* .blog a {
-  color: var(--clr-secondary);
-} */
-
-/* .btn-earn a {
-  color: var(--clr-primary);
-} */
-
-/* .btn-redeem {
-  color: var(--clr-primary);
-} */
 
 
 
@@ -479,8 +444,8 @@ form select, input[type="text"] {
 
 form button {
   padding: 10px 20px;
-  background-color: #333;
-  color: white;
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -488,7 +453,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #555;
+  background-color: var(--clr-secondary);
 }
 
 #redeem-result {
@@ -499,8 +464,8 @@ form button:hover {
 #undo {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--clr-accent3);
+  color: var(--clr-primary);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -508,7 +473,7 @@ form button:hover {
 }
 
 #undo:hover {
-  background-color: #0056b3;
+  background-color: var(--clr-accent3);
 }
 
 /* Loading Spinner
@@ -536,14 +501,14 @@ form button:hover {
   overflow-y: auto;  /* Enable vertical scrolling */
   border: 1px solid #ccc; /* Optional: Add a border for clarity */
   padding: 10px;
-  background-color: #f9f9f9; /* Optional: Background color */
+  background-color: var(--clr-primary); /* Optional: Background color */
 }
 
 #points-history-list li {
   margin-bottom: 10px; /* Spacing between items */
   padding: 5px;
   list-style-type: none; /* Optional: Remove bullet points */
-  background-color: #fff; /* Optional: Set a background color */
+  background-color: var(--clr-primary); /* Optional: Set a background color */
   border-radius: 4px; /* Optional: Rounded corners */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Optional: Shadow for better visuals */
 }
@@ -717,7 +682,7 @@ form button:hover {
   margin-top: 20px;
   padding: 20px;
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background-color: var(--clr-primary);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -729,7 +694,7 @@ form button:hover {
   margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
-  background-color: white;
+  background-color: var(--clr-primary);
 }
 
 .flight-option img {
@@ -743,7 +708,7 @@ form button:hover {
 }
 
 .select-flight-btn {
-  background-color: #003399;
+  background-color: var(--clr-accent3);
   color: white;
   padding: 10px 20px;
   border: none;
@@ -752,7 +717,7 @@ form button:hover {
 }
 
 .select-flight-btn:hover {
-  background-color: #001f66;
+  background-color: var(--clr-accent);
 }
 
 /* Seat Selection page */
@@ -888,3 +853,156 @@ form button:hover {
   font-size: 1.5rem;
 }
 
+.account {
+  background-image: url(./assets/background.png);
+  background-size: cover;
+}
+
+/* General Booking Page Styling */
+.booking-page-body {
+  background-image: url(./assets/booking-background.png);
+  background-size: cover;
+}
+
+.booking-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em;
+  background-color: var(--clr-primary);
+  box-shadow: var(--bs);
+  border-radius: 20px;
+}
+
+.booking-page h1 {
+  font-size: var(--fs-h2);
+  color: var(--clr-secondary);
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.booking-details {
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: var(--bs);
+  font-size: 1.1rem;
+}
+
+.booking-details p {
+  margin: 1em 0;
+  font-size: 1.1rem;
+}
+
+#proceed-payment-btn {
+  background-color: var(--clr-accent);
+  color: var(--clr-primary);
+  display: block;
+  width: 100%;
+  padding: 1em;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 2em;
+}
+
+#proceed-payment-btn:hover {
+  background-color: var(--clr-accent2);
+}
+
+/* Confirmation Modal Styles */
+/* .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--clr-primary);
+  border-radius: 10px;
+  box-shadow: var(--bs);
+  padding: 2em;
+  width: 300px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  padding: 1em;
+}
+
+.modal h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5em;
+}
+
+.modal p {
+  margin-bottom: 1.5em;
+  font-size: 1.1rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.modal-btn {
+  padding: 0.8em 1.5em;
+  background-color: var(--clr-accent2);
+  color: var(--clr-primary);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-btn:hover {
+  background-color: var(--clr-accent3);
+}
+
+#cancel-btn {
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+}
+
+#confirm-btn {
+  background-color: var(--clr-accent);
+  color: var(--clr-primary);
+}
+
+#cancel-btn:hover {
+  background-color: var(--clr-accent2);
+} */
+
+/* For Success Page */
+.booking-success {
+  text-align: center;
+  padding: 5em;
+}
+
+.booking-success h1 {
+  font-size: var(--fs-h1);
+  color: var(--clr-secondary);
+  margin-bottom: 1em;
+}
+
+.booking-success p {
+  font-size: var(--fs-body);
+  margin-bottom: 2em;
+}
+
+.booking-success .btn {
+  font-size: 1.1rem;
+  padding: 1em 2.5em;
+  background-color: var(--clr-accent);
+  color: var(--clr-primary);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.booking-success .btn:hover {
+  background-color: var(--clr-accent2);
+}
